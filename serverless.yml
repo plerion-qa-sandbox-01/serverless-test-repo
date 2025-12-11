@@ -1,0 +1,11 @@
+service: plerion-scan-test
+provider:
+  name: aws
+  runtime: nodejs18.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action: "*"
+      Resource: "*"
+functions:
+  hello:
+    handler: handler.hello
